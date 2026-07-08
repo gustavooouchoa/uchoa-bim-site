@@ -10,8 +10,11 @@
   --blue: #00D2FF;
   --cyan: #33E1FF;
   --white: #FFFFFF;
-  --gray: #8E9AAF;
+  --gray: #8E9AAF;                      /* uso APENAS sobre fundo escuro (contraste ok) */
   --gray-soft: #c9d1e0;
+  --ink-soft: #4A5872;                  /* texto secundário sobre fundo claro (7.1:1) */
+  --ink-body: #44506A;                  /* corpo de texto sobre fundo claro (8:1) */
+  --blue-ink: #0B6D8F;                  /* acento/eyebrow legível sobre fundo claro (5.8:1) */
 
   /* Tipografia */
   --font-title: 'Montserrat', system-ui, sans-serif;
@@ -25,12 +28,15 @@
   --sp-2xl: 48px;
   --sp-3xl: 64px;
 
-  /* Bordas e sombras */
+  /* Bordas e sombras (camadas: ambiente + luz-chave, tom navy) */
   --radius: 4px;
   --radius-md: 8px;
-  --shadow-light: 0 2px 4px rgba(10, 25, 47, 0.1);
-  --shadow-medium: 0 4px 8px rgba(10, 25, 47, 0.15);
-  --shadow-strong: 0 8px 24px rgba(10, 25, 47, 0.35);
+  --shadow-light: 0 1px 2px rgba(10,25,47,.05), 0 3px 8px rgba(10,25,47,.06);
+  --shadow-medium: 0 4px 10px rgba(10,25,47,.09), 0 14px 30px rgba(10,25,47,.11);
+  --shadow-strong: 0 10px 28px rgba(10,25,47,.16), 0 30px 60px rgba(10,25,47,.22);
+
+  /* Curvas de animação (ease-out expo/quint — sem bounce) */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
 
   --maxw: 1140px;
 }
@@ -49,34 +55,56 @@ img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
-h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 700; line-height: 1.15; }
+h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 700; line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; }
+
+/* Âncoras não ficam escondidas sob o header fixo */
+[id] { scroll-margin-top: 96px; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--sp-lg); }
-.section { padding: var(--sp-3xl) 0; }
+.section { padding: clamp(56px, 8vw, 104px) 0; }
+
+/* Eyebrow como marcador de sistema (traço + rótulo), não kicker genérico */
 .eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
   font-family: var(--font-title);
-  font-weight: 600; font-size: 13px; letter-spacing: 2px;
-  text-transform: uppercase; color: var(--blue);
-  margin-bottom: var(--sp-md);
+  font-weight: 700; font-size: 12.5px; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--blue-ink);
+  margin-bottom: 14px;
 }
-.section-title { font-size: clamp(28px, 4vw, 40px); margin-bottom: var(--sp-md); }
-.section-sub { color: var(--gray); font-size: 18px; max-width: 640px; }
+.eyebrow::before {
+  content: ""; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--blue); flex: 0 0 auto;
+}
+/* Sobre fundo escuro, o rótulo volta ao cyan da marca */
+.hero .eyebrow, .stats .eyebrow, .cta .eyebrow, .page-hero .eyebrow { color: var(--cyan); }
+
+.section-title { font-size: clamp(29px, 4.2vw, 44px); letter-spacing: -0.02em; margin-bottom: var(--sp-md); }
+.section-sub { color: var(--ink-soft); font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; max-width: 640px; text-wrap: pretty; }
 .center { text-align: center; }
 .center .section-sub { margin: 0 auto; }
 
 /* ---------- Botões ---------- */
 .btn {
   display: inline-block;
-  font-family: var(--font-title); font-weight: 600; font-size: 14px;
+  font-family: var(--font-title); font-weight: 600; font-size: 14px; letter-spacing: .2px;
   padding: 13px 26px; border-radius: var(--radius);
-  cursor: pointer; transition: all .2s ease; border: 2px solid transparent;
+  cursor: pointer; border: 2px solid transparent;
+  transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), background-color .2s ease, border-color .2s ease;
 }
-.btn-primary { background: var(--blue); color: var(--navy); }
-.btn-primary:hover { background: var(--cyan); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,210,255,.35); }
+.btn-primary { background: var(--blue); color: var(--navy); box-shadow: 0 2px 12px rgba(0,210,255,.22); }
+.btn-primary:hover { background: var(--cyan); transform: translateY(-2px); box-shadow: 0 10px 26px rgba(0,210,255,.38); }
 .btn-outline { background: transparent; border-color: var(--blue); color: var(--blue); }
-.btn-outline:hover { background: rgba(0,210,255,.1); }
+.btn-outline:hover { background: rgba(0,210,255,.1); transform: translateY(-2px); }
 .btn-light { background: var(--white); color: var(--navy); }
 .btn-light:hover { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+.btn:active { transform: translateY(0); }
+
+/* Foco visível por teclado (acessibilidade) */
+a:focus-visible, .btn:focus-visible, button:focus-visible,
+summary:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 3px;
+}
+.hero a:focus-visible, .stats a:focus-visible, .cta a:focus-visible { outline-color: var(--cyan); }
 
 /* ===================================================================
    HEADER
@@ -117,9 +145,9 @@ h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 700; line-height: 
   background-size: 48px 48px; pointer-events: none;
 }
 .hero-inner { position: relative; max-width: 760px; }
-.hero h1 { font-size: clamp(34px, 6vw, 60px); margin-bottom: var(--sp-lg); }
+.hero h1 { font-size: clamp(34px, 6vw, 60px); line-height: 1.08; letter-spacing: -0.025em; margin-bottom: var(--sp-lg); }
 .hero h1 .accent { color: var(--blue); }
-.hero p { font-size: 20px; color: var(--gray-soft); margin-bottom: var(--sp-xl); max-width: 620px; }
+.hero p { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.65; color: var(--gray-soft); margin-bottom: var(--sp-xl); max-width: 600px; text-wrap: pretty; }
 .hero-actions { display: flex; gap: var(--sp-md); flex-wrap: wrap; }
 .hero-tags { display: flex; gap: var(--sp-md); flex-wrap: wrap; margin-top: var(--sp-2xl); }
 .hero-tags span {
@@ -553,4 +581,54 @@ h1, h2, h3, h4 { font-family: var(--font-title); font-weight: 700; line-height: 
 @media (max-width: 760px) {
   .highlight-band { grid-template-columns: 1fr; text-align: center; }
   .highlight-band p { margin: 0 auto; }
+}
+
+/* ===================================================================
+   CONTRASTE DE TEXTO SECUNDÁRIO (fundos claros)
+   O cinza --gray (#8E9AAF) só passa contraste sobre fundo escuro.
+   Sobre branco/f6f8fb usamos --ink-soft (7:1). Bloco no fim: vence
+   por ordem de origem sem alterar tamanhos/margens originais.
+   =================================================================== */
+.card p,
+.step p,
+.service-item p,
+.case-card .case-body p,
+.why-col > p,
+.post-card p,
+.worktype p,
+.seg .seg-body p,
+.chart-note,
+.breadcrumb,
+.article .meta,
+.partners span {
+  color: var(--ink-soft);
+}
+
+/* ===================================================================
+   MOVIMENTO — entrada do hero (sutil, só acima da dobra) + hovers suaves
+   Estado-base é sempre visível; a animação só realça no carregamento.
+   =================================================================== */
+.card, .sol-card, .worktype, .case-card, .post-card, .partner-logos .pl {
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-inner > * { animation: heroRise .7s var(--ease-out) backwards; }
+  .hero-inner > .eyebrow    { animation-delay: .04s; }
+  .hero-inner > h1          { animation-delay: .10s; }
+  .hero-inner > p           { animation-delay: .18s; }
+  .hero-inner > .hero-actions { animation-delay: .26s; }
+  .hero-inner > .hero-tags  { animation-delay: .34s; }
+  .hero-media { animation: heroFade 1s var(--ease-out) .2s backwards; }
+}
+@keyframes heroRise { from { opacity: 0; transform: translateY(16px); } }
+@keyframes heroFade { from { opacity: 0; transform: translateY(12px) scale(.985); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
