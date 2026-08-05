@@ -11,12 +11,12 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.ico?v=3" sizes="any" />
   <link rel="icon" type="image/png" href="assets/img/favicon-512.png?v=3" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3" />
   <link rel="canonical" href="https://uchoabim.com.br/obras-publicas.html" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=1" />
 
   <!-- Dados estruturados: perguntas frequentes sobre aditivo de obra pública -->
   <script type="application/ld+json">
@@ -31,22 +31,26 @@
     ]
   }
   </script>
+  <meta property="og:image" content="https://uchoabim.com.br/assets/img/og-image.jpg?v=1" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://uchoabim.com.br/assets/img/og-image.jpg?v=1" />
 </head>
 <body>
 
-  <header class="header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo"><img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" /></a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Início</a>
+    <header class="hd">
+    <div class="wrap">
+      <a href="index.html" class="hd-logo"><img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" /></a>
+      <button class="hd-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <nav class="hd-nav" id="nav">
         <a href="solucoes.html">Soluções</a>
         <a href="obras-publicas.html">Obras Públicas</a>
         <a href="casos.html">Casos</a>
         <a href="blog.html">Blog</a>
         <a href="sobre.html">Sobre</a>
-        <a href="contato.html" class="btn btn-primary nav-cta">Fale Conosco</a>
+        <a href="contato.html" class="btn btn-primary hd-cta">Fale Conosco</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
     </div>
   </header>
 
@@ -170,41 +174,38 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div style="max-width:280px;">
-          <img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" />
-          <p style="font-size:14px;">Engenharia inteligente. Resultados sustentáveis. Construindo o amanhã, hoje.</p>
-          <p style="font-size:13px; color:var(--gray); margin-top:10px;">📍 Maringá &ndash; PR<br>Atendimento na região e remoto em todo o Brasil.</p>
+    <footer class="ft">
+    <div class="wrap">
+      <div class="ft-top">
+        <div>
+          <img class="flogo" src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" />
+          <p>Engenharia inteligente. Resultados sustentáveis.<br>📍 Maringá-PR · atendimento remoto em todo o Brasil.</p>
         </div>
         <div>
           <h4>Soluções</h4>
           <a href="solucoes-bim.html">BIM</a>
-          <a href="solucoes-desenvolvimento.html">Desenvolvimento de Soluções</a>
           <a href="solucoes-automacao.html">Automação</a>
+          <a href="solucoes-desenvolvimento.html">Desenvolvimento</a>
           <a href="obras-publicas.html">Obras Públicas</a>
         </div>
         <div>
           <h4>Empresa</h4>
           <a href="sobre.html">Sobre</a>
-          <a href="casos.html">Casos de Sucesso</a>
+          <a href="casos.html">Casos</a>
           <a href="blog.html">Blog</a>
           <a href="contato.html">Contato</a>
         </div>
         <div>
           <h4>Contato</h4>
           <a href="mailto:uchoabim@gmail.com">uchoabim@gmail.com</a>
-          <a href="https://linkedin.com/uchoa-bim" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://wa.me/5544988034897" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.linkedin.com/company/uchoa-bim-custos" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        © <span id="year"></span> UCHOA BIM & CUSTOS · Todos os direitos reservados.
-      </div>
+      <div class="ft-bottom">© <span id="year"></span> UCHOA BIM &amp; CUSTOS · Todos os direitos reservados.</div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/redesign.js?v=1"></script>
 </body>
 </html>

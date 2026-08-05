@@ -16,13 +16,13 @@
   <!-- Fontes da marca: Montserrat (títulos) + Inter (texto) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="icon" href="favicon.ico?v=3" sizes="any" />
   <link rel="icon" type="image/png" href="assets/img/favicon-512.png?v=3" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3" />
   <link rel="canonical" href="https://uchoabim.com.br/" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=1" />
 
   <!-- Dados estruturados: nome do site (define o "site name" exibido no Google) -->
   <script type="application/ld+json">
@@ -70,436 +70,246 @@
     ]
   }
   </script>
+  <meta property="og:image" content="https://uchoabim.com.br/assets/img/og-image.jpg?v=1" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://uchoabim.com.br/assets/img/og-image.jpg?v=1" />
 </head>
 <body>
+  <script>document.documentElement.className += ' js';</script>
 
   <!-- ===================== HEADER ===================== -->
-  <header class="header">
-    <div class="container nav">
-      <a href="#inicio" class="nav-logo"><img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" /></a>
-      <nav class="nav-links" id="navLinks">
-        <a href="index.html">Início</a>
+  <header class="hd">
+    <div class="wrap">
+      <a href="index.html" class="hd-logo"><img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" /></a>
+      <button class="hd-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <nav class="hd-nav" id="nav">
         <a href="solucoes.html">Soluções</a>
         <a href="obras-publicas.html">Obras Públicas</a>
         <a href="casos.html">Casos</a>
         <a href="blog.html">Blog</a>
         <a href="sobre.html">Sobre</a>
-        <a href="contato.html" class="btn btn-primary nav-cta">Fale Conosco</a>
+        <a href="contato.html" class="btn btn-primary hd-cta">Fale Conosco</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
     </div>
   </header>
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div class="hero-inner">
-        <p class="eyebrow">Engenharia · BIM · Dados</p>
-        <h1>Soluções em <span class="accent">BIM</span> para projetar, coordenar e orçar com precisão.</h1>
-        <p>Modelagem, compatibilização e orçamento BIM 5D que conectam projeto, quantidade e custo, com menos retrabalho e mais previsibilidade para construtoras, incorporadoras e escritórios de projeto.</p>
-        <div class="hero-actions">
-          <a href="solucoes.html" class="btn btn-primary">Conheça as Soluções</a>
-          <a href="contato.html" class="btn btn-outline">Falar com a UCHOA</a>
-        </div>
-        <div class="hero-tags">
-          <span>Modelagem BIM</span>
-          <span>Coordenação de projetos</span>
-          <span>Compatibilização</span>
-          <span>Quantitativos</span>
-          <span>BIM 5D</span>
-          <span>Automação</span>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Engenharia · BIM · Dados</p>
+          <h1>BIM que transforma <span class="ac">projeto em resultado</span>.</h1>
+          <p class="hero-lead">Somos o <strong>parceiro técnico da construção</strong>: modelagem, compatibilização e orçamento <strong>BIM 5D</strong> que conectam projeto, quantidade e custo.</p>
+          <p class="hero-lead">Menos retrabalho, mais previsibilidade — para construtoras, incorporadoras e escritórios de projeto.</p>
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">Falar com a UCHOA</a>
+            <a href="#solucoes" class="btn btn-ghost">Conheça as soluções</a>
+          </div>
+          <div class="hero-tags">
+            <span>Modelagem BIM</span><span>Compatibilização</span><span>Quantitativos</span><span>BIM 5D</span><span>Automação</span>
+          </div>
         </div>
       </div>
-      <div class="hero-media">
-        <img src="assets/img/portfolio/estrutura-metalica.jpg" alt="Modelo BIM de estrutura metálica desenvolvido pela UCHOA BIM & CUSTOS" />
-      </div>
+    </div>
+    <div class="hero-media">
+      <img src="assets/img/hero-bim.jpg?v=1" alt="Modelo BIM de edifício em wireframe conectado a dados e custos — UCHOA BIM & CUSTOS" />
     </div>
   </section>
 
-  <!-- ===================== DORES / PROBLEMAS ===================== -->
-  <section class="section problems" id="dores">
-    <div class="container">
-      <p class="eyebrow">A dor do cliente</p>
-      <h2 class="section-title">Obras perdem margem quando projeto, quantidade e custo não conversam.</h2>
-      <p class="section-sub">Informações fragmentadas, quantitativos manuais e orçamentos que não acompanham as revisões. O BIM aplicado ao custo reduz essa distância — menos improviso em obra, mais previsibilidade antes da execução.</p>
-      <div class="grid grid-3" style="margin-top: 48px;">
-        <div class="card"><span class="num">01</span><h3>Retrabalho e interferências</h3><p>Conflitos entre arquitetura, estrutura, hidráulica e elétrica detectados tarde demais.</p></div>
-        <div class="card"><span class="num">02</span><h3>Orçamentos imprecisos</h3><p>Quantitativos manuais que não batem com a realidade da obra e geram estouros.</p></div>
-        <div class="card"><span class="num">03</span><h3>Falta de controle</h3><p>Decisões rápidas tomadas sobre dados desatualizados e desconectados entre si.</p></div>
-      </div>
+  <!-- ===================== INTRO ===================== -->
+  <section class="sec-light round-top intro">
+    <div class="wrap">
+      <h2 class="intro-name reveal">UCHOA <span class="ac">BIM &amp; CUSTOS</span></h2>
+      <p class="intro-text reveal">Engenharia, orçamento, planejamento, BIM e automação em um só parceiro. Transformamos o modelo em uma infraestrutura de dados para reduzir risco, melhorar previsibilidade e aumentar a produtividade da sua obra.</p>
     </div>
   </section>
 
-  <!-- ===================== SOLUÇÕES ===================== -->
-  <section class="section" id="solucoes">
-    <div class="container">
-      <div class="center">
+  <!-- ===================== SERVIÇOS ===================== -->
+  <section class="sec sec-light" id="solucoes" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head center reveal">
         <p class="eyebrow">Nossas soluções</p>
-        <h2 class="section-title">Soluções inteligentes para a engenharia do futuro</h2>
-        <p class="section-sub">Da modelagem ao custo, da automação ao desenvolvimento de soluções sob medida para o seu processo.</p>
+        <h2 class="sec-title">Do modelo à decisão de custo</h2>
+        <p class="sec-sub">Três frentes que conectam projeto, quantidade e execução — com rigor técnico e tecnologia a favor da sua margem.</p>
       </div>
-      <div class="grid grid-3" style="margin-top: 48px;">
-        <div class="sol-card">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" class="icon-stroke"><path d="M12 2 21 7v10l-9 5-9-5V7z"/><path d="M12 12 21 7"/><path d="M12 12v10"/><path d="M12 12 3 7"/></svg></div>
+      <div class="svc-grid stagger">
+        <div class="svc">
+          <div class="svc-badge"><img src="assets/img/portfolio/tubulacoes.jpg" alt="Coordenação BIM de instalações" /></div>
           <h3>BIM</h3>
-          <p>Modelagem, coordenação e compatibilização com quantitativos rastreáveis: o modelo como base para decidir custo e execução.</p>
+          <p>Modelagem, coordenação e compatibilização com quantitativos rastreáveis: a base para decidir custo e execução.</p>
+          <a href="solucoes-bim.html" class="svc-link">Ver solução →</a>
         </div>
-        <div class="sol-card">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" class="icon-stroke"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div>
+        <div class="svc">
+          <div class="svc-badge"><img src="assets/img/portfolio/instalacoes-cotas.jpg" alt="Automação de quantitativos" /></div>
           <h3>Automação</h3>
           <p>Rotinas e scripts que eliminam o trabalho manual repetitivo: quantitativos, padronização e conferência de dados.</p>
+          <a href="solucoes-automacao.html" class="svc-link">Ver solução →</a>
         </div>
-        <div class="sol-card">
-          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" class="icon-stroke"><path d="M9 18h6M10 21h4"/><path d="M12 2a6 6 0 0 0-4 10c.8.8 1.3 1.6 1.5 3h5c.2-1.4.7-2.2 1.5-3A6 6 0 0 0 12 2z"/></svg></div>
-          <h3>Desenvolvimento de Soluções</h3>
+        <div class="svc">
+          <div class="svc-badge"><img src="assets/img/portfolio/garagem.jpg" alt="Desenvolvimento de soluções" /></div>
+          <h3>Desenvolvimento</h3>
           <p>Ferramentas sob medida, inclusive com IA, para resolver dores reais do seu processo na construção civil.</p>
+          <a href="solucoes-desenvolvimento.html" class="svc-link">Ver solução →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SEGMENTOS ATENDIDOS ===================== -->
-  <section class="section problems" id="segmentos">
-    <div class="container">
-      <div class="center">
-        <p class="eyebrow">Segmentos que atendemos</p>
-        <h2 class="section-title">BIM para cada tipo de obra</h2>
-        <p class="section-sub">Clique no seu tipo de obra e veja as soluções que prestamos para ele.</p>
+  <!-- ===================== PRESENÇA + STATS ===================== -->
+  <section class="sec sec-dark2 round-top-dark on-dark">
+    <div class="wrap presence">
+      <div class="reveal">
+        <span class="badge-pin">◍ Maringá-PR · Brasil</span>
+        <h2 class="sec-title">Presente onde você estiver</h2>
+        <p class="sec-sub">Sediados em Maringá-PR, atendemos a região presencialmente e projetos remotos em todo o Brasil — com o mesmo rigor técnico e entregáveis verificáveis a cada etapa.</p>
+        <div class="coverage">
+          <span>Atendimento local</span><span>Projetos remotos</span><span>Todo o Brasil</span>
+        </div>
       </div>
-      <div class="seg-acc" style="margin-top:44px;">
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg></span> Residencial e predial <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para prédios e condomínios, atuamos com:</p>
-            <ul class="check">
-              <li>Modelagem de arquitetura, estrutura e instalações</li>
-              <li>Compatibilização para evitar retrabalho na obra</li>
-              <li>Quantitativos confiáveis e orçamento BIM 5D</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 21V8M16 21V8M3 8h18M3 13h18"/></svg></span> Comercial <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para lojas, escritórios e empreendimentos comerciais:</p>
-            <ul class="check">
-              <li>Modelagem e coordenação de projetos</li>
-              <li>Orçamento rápido para estudo de viabilidade</li>
-              <li>Recálculo de custo a cada revisão de projeto</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 21V10l6 4V10l6 4V4l6 3v14z"/></svg></span> Industrial <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para galpões e plantas industriais:</p>
-            <ul class="check">
-              <li>Coordenação de disciplinas e instalações</li>
-              <li>Compatibilização de tubulações e sistemas</li>
-              <li>Quantitativos e controle de custos</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M12 8v8M8 12h8"/></svg></span> Hospitalar <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para obras de saúde, com alta densidade de instalações:</p>
-            <ul class="check">
-              <li>Compatibilização rigorosa entre sistemas</li>
-              <li>Coordenação BIM com rastreabilidade técnica</li>
-              <li>Quantitativos precisos para o orçamento</li>
-            </ul>
-          </div>
-        </details>
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></span> Obras públicas <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para empresas que executam obras de licitação:</p>
-            <ul class="check">
-              <li>BIM para fundamentar aditivo e reequilíbrio antes da obra</li>
-              <li>Quantitativos rastreáveis e bases SINAPI/SICRO</li>
-            </ul>
-            <p style="margin-top:6px;"><a href="obras-publicas.html" style="color:var(--blue); font-weight:600;">Ver a solução completa →</a></p>
-          </div>
-        </details>
-
-        <details class="seg">
-          <summary><span class="seg-ico"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M2 12h4l2-7 4 14 3-9 2 4h5"/></svg></span> Infraestrutura <span class="seg-arrow">+</span></summary>
-          <div class="seg-body">
-            <p>Para obras de maior porte:</p>
-            <ul class="check">
-              <li>Modelagem e quantitativos rastreáveis</li>
-              <li>Orçamento com bases de custo (SINAPI/SICRO)</li>
-              <li>Controle de grandes volumes com previsibilidade</li>
-            </ul>
-          </div>
-        </details>
-
+      <div class="stat-grid stagger">
+        <div class="stat"><div class="big">5D</div><div class="lbl">Modelo conectado a quantitativos, composições e custos</div></div>
+        <div class="stat"><div class="big">360°</div><div class="lbl">Visão técnica para reduzir incertezas antes da execução</div></div>
+        <div class="stat"><div class="big">−20%</div><div class="lbl">Redução de retrabalho com soluções de automação</div></div>
+        <div class="stat"><div class="big">100%</div><div class="lbl">Quantitativos ligados aos elementos do modelo</div></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== DESTAQUE OBRAS PÚBLICAS ===================== -->
-  <section class="section">
-    <div class="container">
-      <div class="highlight-band">
-        <div>
-          <span class="tag-pill">Obras públicas · Licitação</span>
-          <h2>Ganhou a licitação e o projeto não bate com a planilha?</h2>
-          <p>Modelamos em BIM os projetos atualizados para fundamentar o aditivo de obra <strong>antes da execução</strong> — sua empresa pleiteia o reequilíbrio sem desembolsar capital próprio no meio da obra.</p>
-        </div>
-        <a href="obras-publicas.html" class="btn btn-primary" style="white-space:nowrap;">Ver como funciona</a>
+  <!-- ===================== PILARES ===================== -->
+  <section class="sec sec-alt" id="metodo">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Muito além do BIM</p>
+        <h2 class="sec-title">Por que contratar a UCHOA</h2>
+        <p class="sec-sub">Mais que entregar modelos, entregamos previsibilidade, rigor técnico e tecnologia a favor da sua decisão.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ===================== POR QUE A UCHOA ===================== -->
-  <section class="section">
-    <div class="container">
-      <div class="center">
-        <p class="eyebrow">Por que a UCHOA</p>
-        <h2 class="section-title">Por que contratar a UCHOA BIM &amp; CUSTOS</h2>
-        <p class="section-sub">Mais que entregar modelos, entregamos previsibilidade, rigor técnico e tecnologia a favor da sua decisão.</p>
-      </div>
-      <div class="why-grid">
-        <div class="why-col">
-          <div class="why-head"><span class="why-num">1</span><h3>Parceiro orientado a resultados</h3></div>
-          <p>Trabalhamos focados na margem e na previsibilidade do seu empreendimento.</p>
-          <ul class="check">
-            <li>Alinhamento com a viabilidade do projeto</li>
-            <li>Foco em reduzir retrabalho e custos não previstos</li>
-            <li>Embasamento técnico para as suas decisões</li>
-          </ul>
+      <div class="pillars stagger">
+        <div class="pillar">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24"><path d="M3 12l4 4L21 4"/><path d="M3 20h18"/></svg></div>
+          <h3>Parceiro orientado a resultados</h3>
+          <p>Trabalhamos focados na margem e na previsibilidade do seu empreendimento, alinhados à viabilidade do projeto.</p>
         </div>
-        <div class="why-col">
-          <div class="why-head"><span class="why-num">2</span><h3>Precisão técnica de quem constrói</h3></div>
-          <p>Vamos além da detecção automática de conflitos: analisamos com o olhar de engenharia.</p>
-          <ul class="check">
-            <li>Método com entregáveis verificáveis a cada etapa</li>
-            <li>Antecipação de interferências entre disciplinas</li>
-            <li>Rastreabilidade que facilita conferência e auditoria</li>
-          </ul>
+        <div class="pillar">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4-3.5 7-8 8-4.5-1-8-4-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Precisão técnica de quem constrói</h3>
+          <p>Vamos além da detecção automática de conflitos: analisamos com o olhar de engenharia e entregáveis verificáveis.</p>
         </div>
-        <div class="why-col">
-          <div class="why-head"><span class="why-num">3</span><h3>Tecnologia e dados a favor da decisão</h3></div>
-          <p>Transformamos a complexidade do modelo em informação clara e acessível.</p>
-          <ul class="check">
-            <li>Quantitativos ligados aos elementos do modelo</li>
-            <li>Automação e soluções sob medida para o seu processo</li>
-            <li>Dados que viram inteligência executiva</li>
-          </ul>
+        <div class="pillar">
+          <div class="pillar-ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 4-6"/></svg></div>
+          <h3>Tecnologia e dados a favor da decisão</h3>
+          <p>Transformamos a complexidade do modelo em informação clara: quantitativos ligados aos elementos e automação sob medida.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== NÚMEROS ===================== -->
-  <section class="section stats" id="valor">
-    <div class="container">
-      <div class="center">
-        <p class="eyebrow">Valor percebido</p>
-        <h2 class="section-title" style="color:#fff;">O que a construtora ganha na prática</h2>
-      </div>
-      <div class="grid grid-4" style="margin-top: 48px;">
-        <div class="stat"><div class="big">5D</div><div class="label">Modelo conectado a quantitativos, composições e custos</div></div>
-        <div class="stat"><div class="big">360°</div><div class="label">Visão técnica para reduzir incertezas antes da execução</div></div>
-        <div class="stat"><div class="big">−20%</div><div class="label">Redução de retrabalho com soluções de automação</div></div>
-        <div class="stat"><div class="big">100%</div><div class="label">Quantitativos ligados aos elementos do modelo</div></div>
-      </div>
-
-      <!-- Gráfico comparativo: orçamento manual x BIM 5D -->
-      <div style="max-width:760px; margin:56px auto 0;">
-        <h3 style="text-align:center; color:#fff; font-size:20px; margin-bottom:6px;">Orçamento tradicional × Orçamento BIM 5D</h3>
-        <p style="text-align:center; color:var(--gray-soft); font-size:14px; margin-bottom:24px;">A partir do modelo, o orçamento ganha velocidade e precisão.</p>
-        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; font-family:Inter, sans-serif;">
-          <!-- legenda -->
-          <rect x="170" y="0" width="14" height="14" rx="2" fill="#8E9AAF"/>
-          <text x="190" y="11" fill="#c9d1e0" font-size="13">Manual / tradicional</text>
-          <rect x="350" y="0" width="14" height="14" rx="2" fill="#00D2FF"/>
-          <text x="370" y="11" fill="#c9d1e0" font-size="13">BIM 5D</text>
-          <!-- base -->
-          <line x1="60" y1="250" x2="560" y2="250" stroke="#33415c" stroke-width="1.5"/>
-          <!-- Grupo 1: Tempo para orçar -->
-          <rect x="110" y="70" width="60" height="180" rx="3" fill="#8E9AAF"/>
-          <rect x="180" y="186" width="60" height="64" rx="3" fill="#00D2FF"/>
-          <text x="140" y="62" fill="#c9d1e0" font-size="13" text-anchor="middle">alto</text>
-          <text x="210" y="178" fill="#00D2FF" font-size="13" text-anchor="middle" font-weight="700">−65%</text>
-          <text x="175" y="274" fill="#fff" font-size="14" text-anchor="middle" font-weight="600">Tempo para orçar</text>
-          <!-- Grupo 2: Erros de quantitativo -->
-          <rect x="360" y="90" width="60" height="160" rx="3" fill="#8E9AAF"/>
-          <rect x="430" y="200" width="60" height="50" rx="3" fill="#00D2FF"/>
-          <text x="390" y="82" fill="#c9d1e0" font-size="13" text-anchor="middle">alto</text>
-          <text x="460" y="192" fill="#00D2FF" font-size="13" text-anchor="middle" font-weight="700">menor</text>
-          <text x="425" y="274" fill="#fff" font-size="14" text-anchor="middle" font-weight="600">Erros de quantitativo</text>
-        </svg>
-        <p style="text-align:center; color:var(--gray); font-size:12px; margin-top:8px;"><em>Comparativo ilustrativo, baseado em ganhos típicos do fluxo BIM 5D frente ao levantamento manual.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== MÉTODO ===================== -->
-  <section class="section" id="metodo">
-    <div class="container">
-      <p class="eyebrow">Método orientado a entregáveis</p>
-      <h2 class="section-title">Do projeto recebido à informação pronta para decisão</h2>
-      <p class="section-sub">Cada etapa gera entregáveis verificáveis, garantindo que a informação chegue a quem decide custo, prazo, compras e execução.</p>
-      <div class="grid grid-4 steps" style="margin-top: 48px;">
-        <div class="step"><h3>Diagnóstico</h3><p>Leitura dos projetos, escopo, usos do modelo e prioridades da obra.</p></div>
-        <div class="step"><h3>Modelagem</h3><p>Construção ou adequação do modelo BIM por disciplina, com parâmetros úteis.</p></div>
-        <div class="step"><h3>Coordenação</h3><p>Análise de interferências, relatórios e alinhamento com as equipes.</p></div>
-        <div class="step"><h3>Quantificação</h3><p>Quantitativos e custos rastreáveis, prontos para orçamento executivo.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== GALERIA ===================== -->
-  <section class="section">
-    <div class="container">
-      <div class="center">
+  <!-- ===================== PORTFÓLIO ===================== -->
+  <section class="sec sec-dark on-dark" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head reveal">
         <p class="eyebrow">Galeria técnica</p>
-        <h2 class="section-title">Projetos em modelo inteligente</h2>
-        <p class="section-sub">Modelos BIM para visualizar, documentar, medir e coordenar — estrutura, instalações e arquitetura.</p>
+        <h2 class="sec-title">Projetos em modelo inteligente</h2>
+        <p class="sec-sub">Modelos BIM para visualizar, documentar, medir e coordenar — estrutura, instalações e arquitetura.</p>
       </div>
-      <div class="gallery" style="margin-top:40px;">
-        <figure><img src="assets/img/portfolio/instalacoes-cotas.jpg" alt="Modelo BIM de instalações com cotas e levantamento de quantitativos" /><figcaption>Instalações com cotas e quantitativos</figcaption></figure>
-        <figure><img src="assets/img/portfolio/tubulacoes.jpg" alt="Coordenação BIM de tubulações hidráulicas" /><figcaption>Coordenação de instalações</figcaption></figure>
-        <figure><img src="assets/img/portfolio/reservatorios-executivo.jpg" alt="Modelo BIM executivo de reservatórios" /><figcaption>Reservatórios em nível executivo</figcaption></figure>
-        <figure><img src="assets/img/portfolio/garagem.jpg" alt="Render BIM de garagem com sinalização" /><figcaption>Render executivo de subsolo</figcaption></figure>
-        <figure><img src="assets/img/portfolio/reservatorios.jpg" alt="Modelo BIM de reservatórios e instalações prediais" /><figcaption>Instalações prediais</figcaption></figure>
-        <figure><img src="assets/img/portfolio/arquitetura-detalhe.jpg" alt="Detalhe arquitetônico em modelo BIM" /><figcaption>Detalhe arquitetônico</figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SOBRE ===================== -->
-  <section class="section problems" id="sobre">
-    <div class="container grid grid-2" style="align-items:center; gap:48px;">
-      <div>
-        <p class="eyebrow">Quem somos</p>
-        <h2 class="section-title">Precisão técnica + visão comercial</h2>
-        <p style="color:var(--gray); font-size:17px; margin-bottom:16px;">A UCHOA BIM & CUSTOS nasceu da visão de Gustavo, engenheiro civil que buscou na tecnologia a chave para transformar a construção civil. Combinamos engenharia, orçamento, planejamento, BIM e automação.</p>
-        <p style="color:var(--gray); font-size:17px;">Não somos apenas consultores: desenvolvemos soluções que transformam o modelo em uma infraestrutura de dados para reduzir risco, melhorar previsibilidade e aumentar produtividade.</p>
-      </div>
-      <div class="grid" style="gap:16px;">
-        <div class="card"><h3>Inteligência de custos</h3><p>Quantidades conectadas ao orçamento e organizadas para leitura executiva.</p></div>
-        <div class="card"><h3>Rastreabilidade</h3><p>Elementos, parâmetros e critérios que facilitam conferência, revisão e auditoria.</p></div>
+      <div class="pf-grid stagger">
+        <figure class="pf"><img src="assets/img/portfolio/instalacoes-cotas.jpg" alt="Modelo BIM de instalações com cotas e quantitativos" /><figcaption><div class="k">Instalações</div><div class="t">Cotas e quantitativos</div></figcaption></figure>
+        <figure class="pf"><img src="assets/img/portfolio/reservatorios-executivo.jpg" alt="Modelo BIM executivo de reservatórios" /><figcaption><div class="k">Executivo</div><div class="t">Reservatórios</div></figcaption></figure>
+        <figure class="pf"><img src="assets/img/portfolio/tubulacoes.jpg" alt="Coordenação BIM de tubulações" /><figcaption><div class="k">Coordenação</div><div class="t">Tubulações</div></figcaption></figure>
+        <figure class="pf"><img src="assets/img/portfolio/garagem.jpg" alt="Render BIM de garagem" /><figcaption><div class="k">Render</div><div class="t">Subsolo executivo</div></figcaption></figure>
+        <figure class="pf"><img src="assets/img/portfolio/arquitetura-detalhe.jpg" alt="Detalhe arquitetônico em BIM" /><figcaption><div class="k">Arquitetura</div><div class="t">Detalhe construtivo</div></figcaption></figure>
+        <figure class="pf"><img src="assets/img/portfolio/reservatorios.jpg" alt="Instalações prediais em modelo BIM" /><figcaption><div class="k">Instalações prediais</div><div class="t">Reservatórios e ramais</div></figcaption></figure>
       </div>
     </div>
   </section>
 
-  <!-- ===================== FAQ ===================== -->
-  <section class="section problems" id="faq">
-    <div class="container">
-      <div class="center">
-        <p class="eyebrow">Perguntas frequentes</p>
-        <h2 class="section-title">Dúvidas comuns sobre BIM</h2>
-        <p class="section-sub">As perguntas que construtoras, incorporadoras e escritórios mais fazem sobre BIM.</p>
+  <!-- ===================== PARCEIROS ===================== -->
+  <section class="sec sec-light" id="parceiros">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Quem confia na UCHOA</p>
+        <h2 class="sec-title">Parceiros</h2>
       </div>
-      <div class="faq">
-        <details>
-          <summary>O que é BIM e para que serve na construção civil? <span class="q-plus">+</span></summary>
-          <div class="faq-a">BIM (Building Information Modeling) é uma metodologia que reúne todas as informações da obra em um modelo digital inteligente. Cada elemento — parede, viga, tubo — carrega dados de geometria, material, quantidade e custo. Serve como base confiável para projetar, coordenar, orçar e executar com mais previsibilidade.</div>
-        </details>
-        <details>
-          <summary>Quais serviços de BIM a UCHOA oferece? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Modelagem BIM, coordenação e compatibilização de projetos, levantamento de quantitativos, orçamento BIM 5D, automação (Dynamo) e desenvolvimento de soluções. <a href="solucoes.html">Veja todos os serviços</a>.</div>
-        </details>
-        <details>
-          <summary>Qual a diferença entre projetar em CAD e em BIM? <span class="q-plus">+</span></summary>
-          <div class="faq-a">No CAD, o desenho é um conjunto de linhas e cada alteração precisa ser refeita manualmente em cada prancha. No BIM, o modelo é inteligente: mudou um elemento, plantas, cortes e quantitativos se atualizam juntos. Isso reduz erros e dá rastreabilidade.</div>
-        </details>
-        <details>
-          <summary>O BIM serve para quais tipos de obra? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Obras residenciais e prediais, comerciais, industriais, hospitalares, públicas e de infraestrutura. Quanto mais complexa a obra, maior o ganho com BIM. <a href="solucoes.html">Veja por tipo de obra</a>.</div>
-        </details>
-        <details>
-          <summary>A UCHOA presta serviços de BIM em Maringá e região? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Sim. Somos uma empresa de BIM sediada em Maringá-PR, atendendo a cidade e a região — e também projetos remotos em todo o Brasil. <a href="contato.html">Fale conosco</a>.</div>
-        </details>
-        <details>
-          <summary>Preciso ter o Revit para contratar serviços de BIM? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Não. Nós fazemos a modelagem e entregamos o modelo e os documentos: plantas, quantitativos e relatórios prontos para usar, sem precisar comprar ou operar o software.</div>
-        </details>
+      <div class="logo-wall stagger">
+        <div class="lw"><img src="assets/img/parceiros/taico.png" alt="Tai.Co" /></div>
+        <div class="lw"><img src="assets/img/parceiros/glocon.png" alt="Glocon" /></div>
+        <div class="lw"><img src="assets/img/parceiros/evense.png" alt="Evense" /></div>
+        <div class="lw"><img src="assets/img/parceiros/bilfor.png" alt="Bilfor" /></div>
+        <div class="lw"><img src="assets/img/parceiros/bravo.png" alt="Bravo" /></div>
+        <div class="lw"><img src="assets/img/parceiros/marluc.png" alt="Marluc" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG ===================== -->
+  <section class="sec sec-alt" id="blog">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <p class="eyebrow">Blog da UCHOA</p>
+        <h2 class="sec-title">Conteúdo técnico</h2>
+        <p class="sec-sub">BIM, orçamento e obras públicas explicados de forma direta para quem decide.</p>
+      </div>
+      <div class="blog-grid stagger">
+        <a href="blog-bim-5d.html" class="bcard">
+          <div class="thumb"><img src="assets/img/portfolio/reservatorios.jpg" alt="" /></div>
+          <div class="body"><div class="k">BIM 5D</div><h3>Orçamento BIM 5D: do modelo ao custo com rastreabilidade</h3><div class="read">Ler artigo →</div></div>
+        </a>
+        <a href="blog-compatibilizacao.html" class="bcard">
+          <div class="thumb"><img src="assets/img/portfolio/tubulacoes.jpg" alt="" /></div>
+          <div class="body"><div class="k">Compatibilização</div><h3>Compatibilização de projetos: menos retrabalho na obra</h3><div class="read">Ler artigo →</div></div>
+        </a>
+        <a href="blog-aditivo-obra.html" class="bcard">
+          <div class="thumb"><img src="assets/img/portfolio/garagem.jpg" alt="" /></div>
+          <div class="body"><div class="k">Obras públicas</div><h3>Aditivo de obra: como fundamentar o reequilíbrio com BIM</h3><div class="read">Ler artigo →</div></div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ===================== CTA ===================== -->
-  <section class="section cta">
-    <div class="container">
-      <h2>Vamos construir juntos?</h2>
-      <p>Pronto para levar seus projetos ao próximo nível? Nossos especialistas estão prontos para te ajudar a inovar e alcançar resultados extraordinários.</p>
-      <a href="#contato" class="btn btn-primary">Fale com um Especialista</a>
-    </div>
-  </section>
-
-  <!-- ===================== CONTATO ===================== -->
-  <section class="section" id="contato">
-    <div class="container">
-      <div class="center">
-        <p class="eyebrow">Contato</p>
-        <h2 class="section-title">Entre em contato com nossos especialistas</h2>
-        <p class="section-sub">Em Maringá-PR e em todo o Brasil. Fale agora pelo WhatsApp ou preencha o formulário — retornamos o mais breve possível.</p>
-        <div style="margin-top:24px;">
-          <a href="https://wa.me/5544988034897?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20UCHOA%20BIM%20%26%20CUSTOS%20e%20gostaria%20de%20falar%20sobre%20um%20projeto."
-             target="_blank" rel="noopener" class="btn btn-whatsapp">
-            <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4c-1-1.6-1.5-3.4-1.5-5.3C4.9 9.5 9.9 4.6 16 4.6S27 9.5 27 15.6 22 24.8 16 24.8zm5.6-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.9 5.1 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
-            Falar no WhatsApp
-          </a>
-        </div>
-      </div>
-      <!-- Envia a mensagem direto para o WhatsApp da empresa -->
-      <form class="contact-form" style="margin-top:40px;" id="contactForm">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="email" name="email" placeholder="Seu e-mail" required />
-        <input type="text" name="empresa" placeholder="Empresa" />
-        <textarea name="mensagem" placeholder="Como podemos ajudar no seu projeto?" required></textarea>
-        <button type="submit" class="btn btn-primary">Enviar pelo WhatsApp</button>
-      </form>
+  <section class="sec cta-band" id="contato">
+    <div class="wrap">
+      <h2 class="reveal">Vamos construir juntos?</h2>
+      <p class="reveal">Conte seu desafio de projeto, quantitativos ou orçamento. Respondemos rápido e mostramos como o BIM reduz risco na sua obra.</p>
+      <div class="reveal"><a href="https://wa.me/5544988034897" target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp</a></div>
     </div>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div style="max-width:280px;">
-          <img src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" />
-          <p style="font-size:14px;">Engenharia inteligente. Resultados sustentáveis. Construindo o amanhã, hoje.</p>
-          <p style="font-size:13px; color:var(--gray); margin-top:10px;">📍 Maringá &ndash; PR<br>Atendimento na região e remoto em todo o Brasil.</p>
+  <footer class="ft">
+    <div class="wrap">
+      <div class="ft-top">
+        <div>
+          <img class="flogo" src="assets/img/logo-light.png" alt="UCHOA BIM & CUSTOS" />
+          <p>Engenharia inteligente. Resultados sustentáveis.<br>📍 Maringá-PR · atendimento remoto em todo o Brasil.</p>
         </div>
         <div>
           <h4>Soluções</h4>
           <a href="solucoes-bim.html">BIM</a>
-          <a href="solucoes-desenvolvimento.html">Desenvolvimento de Soluções</a>
           <a href="solucoes-automacao.html">Automação</a>
-          <a href="solucoes.html">Engenharia de Custos</a>
+          <a href="solucoes-desenvolvimento.html">Desenvolvimento</a>
+          <a href="obras-publicas.html">Obras Públicas</a>
         </div>
         <div>
           <h4>Empresa</h4>
           <a href="sobre.html">Sobre</a>
-          <a href="casos.html">Casos de Sucesso</a>
+          <a href="casos.html">Casos</a>
           <a href="blog.html">Blog</a>
           <a href="contato.html">Contato</a>
         </div>
         <div>
           <h4>Contato</h4>
           <a href="mailto:uchoabim@gmail.com">uchoabim@gmail.com</a>
-          <a href="https://linkedin.com/uchoa-bim" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://wa.me/5544988034897" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.linkedin.com/company/uchoa-bim-custos" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        © <span id="year"></span> UCHOA BIM & CUSTOS · Todos os direitos reservados.
-      </div>
+      <div class="ft-bottom">© <span id="year"></span> UCHOA BIM &amp; CUSTOS · Todos os direitos reservados.</div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2"></script>
+  <script src="assets/js/redesign.js?v=1"></script>
 </body>
 </html>
