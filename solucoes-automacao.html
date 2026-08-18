@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Automação BIM com Dynamo em Maringá-PR | Quantitativos e Processos — UCHOA BIM & CUSTOS</title>
-  <meta name="description" content="Automação de processos BIM com Dynamo e scripts em Maringá-PR e em todo o Brasil: extração de quantitativos, padronização e conferência de dados no Revit para acelerar tarefas repetitivas com precisão." />
+  <title>Automação BIM em Revit e Dynamo | Rotinas sob medida — UCHOA BIM & CUSTOS</title>
+  <meta name="description" content="Automação de processos BIM em Revit com Dynamo e Python, em Maringá-PR e em todo o Brasil: extração de quantitativos, padronização e conferência de dados direto do modelo, para a sua equipe parar de refazer tarefas na mão." />
+  <meta name="keywords" content="automação Revit, automação BIM, Dynamo, Python, extração de quantitativos, padronização de modelo, automação BIM construtora, Maringá" />
   <meta name="geo.region" content="BR-PR" />
   <meta name="geo.placename" content="Maringá" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,6 +14,7 @@
   <link rel="icon" href="favicon.ico?v=3" sizes="any" />
   <link rel="icon" type="image/png" href="assets/img/favicon-512.png?v=3" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3" />
+  <link rel="canonical" href="https://uchoabim.com.br/solucoes-automacao.html" />
   <link rel="stylesheet" href="assets/css/redesign.css?v=1" />
 
   <!-- Dados estruturados: perguntas frequentes sobre automação BIM -->
@@ -21,10 +23,10 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"O que é automação no BIM e o que é o Dynamo?","acceptedAnswer":{"@type":"Answer","text":"Automação no BIM é usar rotinas e scripts para executar tarefas repetitivas no modelo automaticamente. O Dynamo é uma ferramenta de programação visual do Revit que permite criar essas rotinas conectando blocos, sem precisar ser programador."}},
-      {"@type":"Question","name":"Para que serve a automação com Dynamo no Revit?","acceptedAnswer":{"@type":"Answer","text":"Serve para acelerar tarefas que demorariam horas manualmente: extração de quantitativos, padronização de nomenclaturas, atualização de parâmetros, organização de folhas e conferência de dados, com menos erro."}},
-      {"@type":"Question","name":"A automação BIM integra com Excel?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Dynamo lê e escreve planilhas Excel, algo que o Revit não faz nativamente. Isso permite levar quantitativos e dados do modelo para planilhas e trazer informações de volta para o modelo."}},
-      {"@type":"Question","name":"A UCHOA desenvolve automações sob medida?","acceptedAnswer":{"@type":"Answer","text":"Sim. Criamos rotinas e scripts (Dynamo e Python) sob medida para o processo da sua equipe, em Maringá-PR e remotamente para todo o Brasil."}}
+      {"@type":"Question","name":"O que é automação no BIM e o que é o Dynamo?","acceptedAnswer":{"@type":"Answer","text":"Automação no BIM é usar rotinas e scripts para executar tarefas repetitivas no modelo automaticamente. O Dynamo é a ferramenta de programação visual do Revit que permite criar essas rotinas conectando blocos, e que combino com Python para lógica mais avançada."}},
+      {"@type":"Question","name":"Para que serve a automação com Dynamo no Revit?","acceptedAnswer":{"@type":"Answer","text":"Para acelerar tarefas que demorariam horas na mão: extração de quantitativos, padronização de nomenclaturas, atualização de parâmetros, organização de folhas e conferência de dados, com muito menos erro."}},
+      {"@type":"Question","name":"A automação BIM integra com Excel?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Dynamo lê e escreve planilhas Excel, algo que o Revit não faz nativamente. Dá para levar quantitativos e dados do modelo para o Excel e trazer informações de volta para o modelo."}},
+      {"@type":"Question","name":"Você desenvolve automações sob medida em Maringá?","acceptedAnswer":{"@type":"Answer","text":"Sim. Crio rotinas e scripts (Dynamo e Python) sob medida para o processo da sua equipe, em Maringá-PR e remotamente para todo o Brasil."}}
     ]
   }
   </script>
@@ -51,46 +53,79 @@
     </div>
   </header>
 
+  <!-- HERO — nomeia o problema -->
   <section class="page-hero">
     <div class="container page-hero-inner">
       <p class="breadcrumb"><a href="index.html">Início</a> / <a href="solucoes.html">Soluções</a> / Automação</p>
-      <h1>Automação: eficiência sem precedentes na construção</h1>
-      <p>Automatizamos tarefas repetitivas e complexas, garantindo precisão, velocidade e redução de custos nos seus projetos.</p>
+      <h1>O trabalho repetitivo do Revit não deveria consumir a sua equipe</h1>
+      <p>Eu escrevo as rotinas em Dynamo e Python que extraem quantitativo, padronizam e conferem o modelo. A sua equipe para de refazer tarefa na mão e volta a fazer o que importa: decidir.</p>
     </div>
   </section>
 
+  <!-- ponte + imagem do Dynamo -->
   <section class="section">
-    <div class="container prose">
-      <p>Além da entrega de modelos, há valor na criação de rotinas, padrões e automações para acelerar tarefas repetitivas. Processos BIM que não dependem apenas de esforço manual liberam sua equipe para o que realmente importa: a decisão estratégica.</p>
-    </div>
-  </section>
-
-  <section class="section problems">
     <div class="container">
-      <p class="eyebrow">Exemplos de automação</p>
-      <h2 class="section-title">O que automatizamos</h2>
-      <div class="grid grid-2" style="margin-top:40px;">
-        <div class="card"><h3>Rotinas e scripts</h3><p>Automação de tarefas técnicas e repetitivas em fluxos BIM.</p></div>
-        <div class="card"><h3>Extração de quantitativos</h3><p>Levantamentos automatizados, conectados aos elementos do modelo.</p></div>
-        <div class="card"><h3>Templates e padrões</h3><p>Organização para que equipes trabalhem com consistência.</p></div>
-        <div class="card"><h3>Conferência e padronização</h3><p>Verificação de informações e padronização de nomenclaturas.</p></div>
+      <div class="grid grid-2" style="gap:40px; align-items:center;">
+        <div class="prose" style="max-width:none;">
+          <p>Muita coisa no Revit é feita na mão porque "sempre foi assim": renomear, conferir, extrair tabela, atualizar parâmetro. É tempo de gente qualificada gasto no que um script faz em segundos, e sem o erro de quem repete a mesma tarefa pela quinquagésima vez.</p>
+          <p>Eu automatizo essas rotinas sob medida para o fluxo da sua equipe, não com um script genérico de prateleira.</p>
+        </div>
+        <!-- IMAGEM Uchoa: captura do canvas do Dynamo, grafo de um dos meus scripts de automação
+             (ex.: extração de quantitativos ou padronização de parâmetros).
+             Recorte horizontal 16:9, mínimo 1600px de largura, nós legíveis mas sem precisar ler o texto.
+             NÃO usar imagem de modelo BIM aqui: a imagem tem que mostrar programação (grafo/código).
+             SANITIZAR: sem nome de cliente/obra no título do arquivo, sem caminho de pasta visível,
+             sem nome de nível/pavimento do projeto dentro dos nós. -->
+        <figure class="figure-block" style="aspect-ratio:16/9; display:grid; place-items:center; background:var(--paper-2); border:2px dashed var(--line-cyan); color:var(--ink-soft); text-align:center; padding:24px; margin:0;">
+          <span><strong>[ Grafo do Dynamo ]</strong><br>rotina de automação no Revit<br><small>captura 16:9 · a inserir (spec no HTML)</small></span>
+        </figure>
       </div>
     </div>
   </section>
 
+  <!-- o que automatizo -->
+  <section class="section problems">
+    <div class="container">
+      <p class="eyebrow">O que eu automatizo</p>
+      <h2 class="section-title">Tarefas que ninguém deveria fazer duas vezes</h2>
+      <div class="grid grid-2" style="margin-top:40px;">
+        <div class="card"><h3>Rotinas e scripts sob medida</h3><p>Automatizo as tarefas técnicas e repetitivas do seu fluxo BIM, do jeito que a sua equipe trabalha.</p></div>
+        <div class="card"><h3>Extração de quantitativos</h3><p>Levanto quantitativo conectado aos elementos do modelo, pronto para orçar, sem digitação manual.</p></div>
+        <div class="card"><h3>Templates e padrões</h3><p>Padronizo o modelo para a equipe trabalhar consistente e o processo escalar.</p></div>
+        <div class="card"><h3>Conferência e padronização</h3><p>Confiro informações e padronizo nomenclaturas antes que o erro vire custo em obra.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ganhos -->
   <section class="section">
     <div class="container prose">
       <h2>Ganhos para o seu fluxo</h2>
       <ul class="check">
         <li>Velocidade na extração de quantitativos</li>
-        <li>Redução de erros em tarefas repetitivas</li>
-        <li>Padronização e escalabilidade do fluxo BIM</li>
+        <li>Menos erro em tarefas repetitivas</li>
+        <li>Padronização e escala do fluxo BIM</li>
         <li>Equipe focada em análise e decisão</li>
       </ul>
     </div>
   </section>
 
-  <section class="section problems">
+  <!-- ponte para o case (desenvolvimento) -->
+  <section class="section problems" style="padding-top:0;">
+    <div class="container">
+      <div class="highlight-band">
+        <div>
+          <span class="tag-pill">Quando a rotina vira sistema</span>
+          <h2>Às vezes a dor não é uma tarefa isolada. É um cálculo inteiro que mora numa planilha.</h2>
+          <p>Foi o caso do sistema que desenvolvi para calcular e orçar fôrma direto do modelo, face a face. Automação que virou um sistema em produção.</p>
+        </div>
+        <a href="solucoes-desenvolvimento.html" class="btn btn-primary" style="white-space:nowrap;">Ver o case completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
     <div class="container">
       <div class="center">
         <p class="eyebrow">Perguntas frequentes</p>
@@ -99,19 +134,19 @@
       <div class="faq">
         <details>
           <summary>O que é automação no BIM e o que é o Dynamo? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Automação no BIM é usar rotinas e scripts para executar tarefas repetitivas no modelo automaticamente. O Dynamo é uma ferramenta de programação visual do Revit que permite criar essas rotinas conectando blocos — sem precisar ser programador.</div>
+          <div class="faq-a">Automação no BIM é usar rotinas e scripts para executar tarefas repetitivas no modelo automaticamente. O Dynamo é a ferramenta de programação visual do Revit que permite criar essas rotinas conectando blocos, e que eu combino com Python para a lógica mais avançada.</div>
         </details>
         <details>
           <summary>Para que serve a automação com Dynamo no Revit? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Para acelerar tarefas que demorariam horas manualmente: extração de quantitativos, padronização de nomenclaturas, atualização de parâmetros, organização de folhas e conferência de dados — com muito menos erro.</div>
+          <div class="faq-a">Para acelerar tarefas que demorariam horas na mão: extração de quantitativos, padronização de nomenclaturas, atualização de parâmetros, organização de folhas e conferência de dados, com muito menos erro.</div>
         </details>
         <details>
           <summary>A automação BIM integra com Excel? <span class="q-plus">+</span></summary>
           <div class="faq-a">Sim. O Dynamo lê e escreve planilhas Excel, algo que o Revit não faz nativamente. Dá para levar quantitativos e dados do modelo para o Excel e trazer informações de volta para o modelo.</div>
         </details>
         <details>
-          <summary>A UCHOA desenvolve automações sob medida em Maringá? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Sim. Criamos rotinas e scripts (Dynamo e Python) sob medida para o processo da sua equipe, em Maringá-PR e remotamente para todo o Brasil. <a href="contato.html">Fale conosco</a>.</div>
+          <summary>Você desenvolve automações sob medida em Maringá? <span class="q-plus">+</span></summary>
+          <div class="faq-a">Sim. Crio rotinas e scripts (Dynamo e Python) sob medida para o processo da sua equipe, em Maringá-PR e remotamente para todo o Brasil. <a href="contato.html">Fale comigo</a>.</div>
         </details>
       </div>
     </div>
@@ -119,9 +154,9 @@
 
   <section class="section cta">
     <div class="container">
-      <h2>Liberte sua equipe para o que realmente importa</h2>
-      <p>Conheça nossas ferramentas de automação e otimize seus processos.</p>
-      <a href="contato.html" class="btn btn-primary">Otimize Seus Processos</a>
+      <h2>Tem uma tarefa que a sua equipe refaz toda semana?</h2>
+      <p>Me conta qual é. Se der para automatizar, eu te mostro como.</p>
+      <a href="contato.html" class="btn btn-primary">Falar com a UCHOA</a>
     </div>
   </section>
 
