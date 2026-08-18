@@ -100,13 +100,8 @@
           <p>Para orçar uma obra, alguém precisa calcular quantos m² de fôrma cada pavimento consome. E, principalmente, quanto disso é material novo e quanto é reaproveitamento do pavimento de baixo.</p>
           <p>Isso era feito na mão, em planilha, lendo o projeto. É um cálculo de geometria real (cada face de cada pilar, viga e laje), com regras de obra (jogo de fôrma, ciclo de reescoramento, limite de usos, prumada) e o julgamento de quem tem experiência. Demorado, difícil de auditar, impossível de repetir igual.</p>
         </div>
-        <!-- IMAGEM Uchoa (PRINCIPAL): captura do canvas do Dynamo, grafo do script de cálculo de fôrma de vigas.
-             Recorte horizontal 16:9, mínimo 1600px de largura, nós legíveis mas sem precisar ler o texto.
-             Sugestão de composição: grafo do Dynamo em primeiro plano com o modelo BIM desfocado ao fundo.
-             SANITIZAR antes de mandar: sem nome de cliente/obra no título do arquivo, sem caminho de pasta
-             visível, sem nome de nível/pavimento do projeto aparecendo dentro dos nós. -->
-        <figure class="figure-block" style="aspect-ratio:16/9; display:grid; place-items:center; background:var(--paper-2); border:2px dashed var(--line-cyan); color:var(--ink-soft); text-align:center; padding:24px; margin:0;">
-          <span><strong>[ Grafo do Dynamo ]</strong><br>rotina de cálculo de fôrma de vigas<br><small>captura 16:9 · a inserir (ver spec no HTML)</small></span>
+        <figure class="figure-block" style="margin:0; overflow:hidden; background:#0b1526;">
+          <img src="assets/img/case-forma-dynamo.webp?v=1" loading="lazy" width="1097" height="710" alt="Grafo do Dynamo com a rotina de cálculo de fôrma de vigas: parâmetros de ciclo de fôrma tipo e atípico, quantidade de usos e escoramento metálico" style="width:100%; height:auto; display:block;" />
         </figure>
       </div>
     </div>
@@ -155,19 +150,17 @@
           <div class="service-item"><span class="n">04</span><div><h3>Dashboard em Power BI</h3><p>Para ler a obra inteira por indicador.</p></div></div>
           <div class="service-item"><span class="n">05</span><div><h3>Parâmetros de auditoria em cada elemento</h3><p>Abra qualquer peça e veja por que o sistema decidiu aquilo.</p></div></div>
         </div>
-        <!-- IMAGEM Uchoa (SAÍDA DO SISTEMA): captura do modelo no Revit com a fôrma COLORIDA POR STATUS
-             (novo / reaproveitado / compensado), com a legenda de cores visível. É a saída do sistema,
-             não um modelo de arquitetura — deixe claro o mapa de cores.
-             Recorte vertical 3:4 (para acompanhar a lista ao lado), mínimo 1200px de largura.
-             SANITIZAR COM ATENÇÃO REDOBRADA (view do Revit vaza muito nome):
-               - título/nome da VIEW (canto ou carimbo) — renomear para algo genérico antes do print;
-               - ANOTAÇÕES na view: tags, textos, cotas e legendas que citem obra/pavimento/cliente;
-               - nome do NÍVEL/pavimento (ex.: "3º PAV - OBRA X") em marcações, grids e níveis visíveis;
-               - Project Browser, ViewCube com nome de vista nomeada, barra de título e caminho de arquivo;
-               - nome do arquivo da captura. Deixe só o modelo + a legenda de cores de status. -->
-        <figure class="figure-block" style="aspect-ratio:3/4; display:grid; place-items:center; background:var(--paper); border:2px dashed var(--line-cyan); color:var(--ink-soft); text-align:center; padding:24px; margin:0;">
-          <span><strong>[ Modelo colorido por status ]</strong><br>novo · reaproveitado · compensado<br><small>captura vertical 3:4 · a inserir (spec no HTML)</small></span>
-        </figure>
+        <div>
+          <figure class="figure-block" style="margin:0 0 16px; background:#fff; overflow:hidden;">
+            <img src="assets/img/case-forma-modelo.webp?v=1" loading="lazy" width="594" height="633" alt="Modelo estrutural em BIM com a fôrma colorida por status: verde para novo, laranja para compensado, magenta para reaproveitado e azul para não se aplica" style="width:100%; height:auto; display:block;" />
+          </figure>
+          <ul class="forma-legend" aria-label="Legenda de cores da fôrma por status">
+            <li><span class="sw" style="background:#41B140;"></span> Novo</li>
+            <li><span class="sw" style="background:#DB7B26;"></span> Compensado</li>
+            <li><span class="sw" style="background:#E910E8;"></span> Reaproveitado 100%</li>
+            <li><span class="sw" style="background:#2363D6;"></span> Não se aplica</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
