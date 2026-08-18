@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Desenvolvimento de Soluções Tecnológicas para a Construção Civil em Maringá-PR — UCHOA BIM & CUSTOS</title>
-  <meta name="description" content="Desenvolvemos ferramentas e automações sob medida para a construção civil em Maringá-PR e em todo o Brasil: rotinas, scripts e soluções tecnológicas (inclusive com IA) que resolvem dores reais de quem projeta, orça e executa." />
-  <meta name="keywords" content="desenvolvimento de soluções, soluções tecnológicas construção civil, automação de processos, ferramentas BIM sob medida, scripts Dynamo, tecnologia na engenharia, Maringá" />
+  <title>Automação e desenvolvimento sob medida em Revit e Dynamo — UCHOA BIM & CUSTOS</title>
+  <meta name="description" content="Desenvolvo software sob medida para a construção civil: automações em Revit (Dynamo/Python) que calculam direto da geometria do modelo BIM. Case real, em produção: cálculo e orçamento de fôrma face a face, com separação de material novo e reaproveitado." />
+  <meta name="keywords" content="automação Revit, Dynamo, Python, automação BIM, orçamento de fôrma, cálculo de fôrma, quantitativo automático, desenvolvimento sob medida construção, automação BIM construtora, Maringá" />
   <meta name="geo.region" content="BR-PR" />
   <meta name="geo.placename" content="Maringá" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,18 +14,19 @@
   <link rel="icon" href="favicon.ico?v=3" sizes="any" />
   <link rel="icon" type="image/png" href="assets/img/favicon-512.png?v=3" />
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=3" />
+  <link rel="canonical" href="https://uchoabim.com.br/solucoes-desenvolvimento.html" />
   <link rel="stylesheet" href="assets/css/redesign.css?v=1" />
 
-  <!-- Dados estruturados: perguntas frequentes sobre desenvolvimento de soluções -->
+  <!-- Dados estruturados: perguntas frequentes sobre automação e desenvolvimento sob medida -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"O que é desenvolvimento de soluções tecnológicas para a construção civil?","acceptedAnswer":{"@type":"Answer","text":"É a criação de ferramentas, automações e pequenos sistemas sob medida para resolver problemas específicos do dia a dia da engenharia, quando não existe no mercado uma ferramenta pronta para aquela necessidade."}},
-      {"@type":"Question","name":"A UCHOA cria ferramentas sob medida?","acceptedAnswer":{"@type":"Answer","text":"Sim. Desenvolvemos automações, planilhas inteligentes e pequenas aplicações que se encaixam no processo da sua equipe, usando programação, automação e, quando faz sentido, Inteligência Artificial."}},
-      {"@type":"Question","name":"Vocês usam Inteligência Artificial nas soluções?","acceptedAnswer":{"@type":"Answer","text":"Usamos IA como meio, quando ela acelera análises e automações. O foco é resolver a dor do cliente com a tecnologia mais adequada, não vender IA como produto."}},
-      {"@type":"Question","name":"A UCHOA desenvolve soluções em Maringá?","acceptedAnswer":{"@type":"Answer","text":"Sim. Desenvolvemos soluções tecnológicas sob medida em Maringá-PR e remotamente para empresas de todo o Brasil."}}
+      {"@type":"Question","name":"O que é automação sob medida em Revit e Dynamo?","acceptedAnswer":{"@type":"Answer","text":"É construir a lógica do seu processo dentro do Revit, usando Dynamo e Python, para calcular e extrair dados direto da geometria do modelo. Em vez de um script genérico, a regra da sua obra vira software."}},
+      {"@type":"Question","name":"Dá para calcular quantitativo direto da geometria do modelo BIM?","acceptedAnswer":{"@type":"Answer","text":"Sim. É o que o sistema de fôrma faz: mede a área real de cada face de cada elemento, não uma estimativa por perímetro vezes pé-direito. O mesmo vale para outros quantitativos."}},
+      {"@type":"Question","name":"E se o desenvolvedor sair depois? A empresa fica dependente?","acceptedAnswer":{"@type":"Answer","text":"Não. A regra é documentada e a operação é transferida para a equipe do cliente. A inteligência do processo fica na empresa. No case de fôrma, são 22 documentos de especificação de regra de negócio."}},
+      {"@type":"Question","name":"Você desenvolve automações à distância?","acceptedAnswer":{"@type":"Answer","text":"Sim. Atendo de Maringá-PR e remotamente para empresas de todo o Brasil."}}
     ]
   }
   </script>
@@ -52,78 +53,222 @@
     </div>
   </header>
 
+  <!-- ===================== HERO — nomeia o problema, não o serviço ===================== -->
   <section class="page-hero">
     <div class="container page-hero-inner">
       <p class="breadcrumb"><a href="index.html">Início</a> / <a href="solucoes.html">Soluções</a> / Desenvolvimento de Soluções</p>
-      <h1>Desenvolvimento de soluções tecnológicas para a construção civil</h1>
-      <p>Quando a ferramenta certa não existe, a gente cria. Automações e soluções sob medida para resolver as dores reais de quem projeta, orça e executa.</p>
+      <h1>Quando o cálculo que decide sua proposta depende de uma planilha e de uma pessoa</h1>
+      <p>Eu desenvolvo software sob medida que lê a geometria do modelo BIM, aplica a regra de obra como ela é de verdade e entrega um número rastreável: o mesmo com qualquer operador. Abaixo, um sistema real que já está em produção.</p>
     </div>
   </section>
 
+  <!-- ===================== PONTE ===================== -->
   <section class="section">
     <div class="container prose">
-      <p>Muitos processos na construção civil ainda são manuais, repetitivos e dependentes de planilhas que não conversam entre si. Nem sempre existe no mercado uma ferramenta pronta para o problema específico da sua empresa. É aí que entramos: desenvolvemos soluções tecnológicas sob medida — usando programação, automação e, quando faz sentido, Inteligência Artificial — para transformar esses gargalos em fluxos eficientes.</p>
+      <p>Toda empresa de construção tem um processo que custa caro e mora fora do software: ele vive numa planilha e na experiência de quem a preenche. Difícil de auditar, impossível de reproduzir igual, e refém de uma pessoa.</p>
+      <p>Eu não vendo ferramenta de prateleira. Eu entro nesse processo específico, entendo a regra como ela funciona na obra e transformo isso em software que roda em produção.</p>
     </div>
   </section>
 
+  <!-- ===================== O QUE EU FAÇO — dor, não tecnologia ===================== -->
   <section class="section problems">
     <div class="container">
-      <p class="eyebrow">O que desenvolvemos</p>
-      <h2 class="section-title">Tecnologia aplicada à sua dor</h2>
-      <div class="grid grid-3" style="margin-top:40px;">
-        <div class="card"><h3>Automação de processos</h3><p>Rotinas e scripts que eliminam tarefas repetitivas em fluxos BIM e de orçamento.</p></div>
-        <div class="card"><h3>Ferramentas sob medida</h3><p>Pequenas aplicações e planilhas inteligentes que se encaixam no processo da sua equipe.</p></div>
-        <div class="card"><h3>Extração e organização de dados</h3><p>Soluções que reúnem informações dispersas e as transformam em dados úteis para decidir.</p></div>
-        <div class="card"><h3>Integração entre sistemas</h3><p>Conexão entre modelo, planilhas e ferramentas para que tudo converse.</p></div>
-        <div class="card"><h3>Padronização</h3><p>Templates e padrões que dão consistência e escalam o trabalho.</p></div>
-        <div class="card"><h3>IA aplicada</h3><p>Quando faz sentido, usamos Inteligência Artificial para acelerar análises e automações.</p></div>
+      <p class="eyebrow">O que eu faço</p>
+      <h2 class="section-title">Software que resolve a dor, não que fala de tecnologia</h2>
+      <div class="grid grid-2" style="margin-top:40px;">
+        <div class="card"><h3>Cálculo e orçamento automatizados</h3><p>Quando o levantamento é feito na unha, cada revisão custa horas e nunca sai igual. Eu calculo direto do modelo, com a regra da sua obra.</p></div>
+        <div class="card"><h3>Extração de dados do modelo</h3><p>A informação já existe no modelo, mas presa. Eu tiro dela quantitativos, tabelas e parâmetros prontos para orçar e decidir.</p></div>
+        <div class="card"><h3>Visualização e painel</h3><p>Número em planilha ninguém confere. Eu devolvo o dado no modelo colorido e em painel, para você bater o olho e ver se faz sentido.</p></div>
+        <div class="card"><h3>Integração entre sistemas</h3><p>Modelo, planilha e ferramentas que não se falam viram retrabalho. Eu conecto o que hoje é copiado e colado à mão.</p></div>
       </div>
     </div>
   </section>
 
+  <!-- ===================== CASE — o coração da página ===================== -->
   <section class="section">
-    <div class="container prose">
-      <h2>Por que desenvolver uma solução sob medida</h2>
-      <ul class="check">
-        <li>Resolve exatamente o seu problema — não um genérico</li>
-        <li>Elimina tarefas manuais e reduz erros</li>
-        <li>Ganha velocidade e padronização no processo</li>
-        <li>Libera a equipe para o trabalho estratégico</li>
-      </ul>
+    <div class="container">
+      <div class="center">
+        <p class="eyebrow">Case real · em produção</p>
+        <h2 class="section-title">Um sistema que calcula fôrma face a face, direto do modelo</h2>
+        <!-- CONFIDENCIAL: cliente anonimizado (sem autorização). Se liberado, o nome da empresa entra na frase abaixo. -->
+        <p class="section-sub" style="margin:0 auto;">Não é protótipo nem demonstração. É software que roda em produção, calculando o orçamento de fôrma de uma empresa de locação e industrialização de fôrmas de concreto.</p>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:48px; gap:40px; align-items:center;">
+        <div class="prose" style="max-width:none;">
+          <h3>O problema</h3>
+          <p>Para orçar uma obra, alguém precisa calcular quantos m² de fôrma cada pavimento consome. E, principalmente, quanto disso é material novo e quanto é reaproveitamento do pavimento de baixo.</p>
+          <p>Isso era feito na mão, em planilha, lendo o projeto. É um cálculo de geometria real (cada face de cada pilar, viga e laje), com regras de obra (jogo de fôrma, ciclo de reescoramento, limite de usos, prumada) e o julgamento de quem tem experiência. Demorado, difícil de auditar, impossível de repetir igual.</p>
+        </div>
+        <!-- IMAGEM Uchoa (PRINCIPAL): captura do canvas do Dynamo, grafo do script de cálculo de fôrma de vigas.
+             Recorte horizontal 16:9, mínimo 1600px de largura, nós legíveis mas sem precisar ler o texto.
+             Sugestão de composição: grafo do Dynamo em primeiro plano com o modelo BIM desfocado ao fundo.
+             SANITIZAR antes de mandar: sem nome de cliente/obra no título do arquivo, sem caminho de pasta
+             visível, sem nome de nível/pavimento do projeto aparecendo dentro dos nós. -->
+        <figure class="figure-block" style="aspect-ratio:16/9; display:grid; place-items:center; background:var(--paper-2); border:2px dashed var(--line-cyan); color:var(--ink-soft); text-align:center; padding:24px; margin:0;">
+          <span><strong>[ Grafo do Dynamo ]</strong><br>rotina de cálculo de fôrma de vigas<br><small>captura 16:9 · a inserir (ver spec no HTML)</small></span>
+        </figure>
+      </div>
     </div>
   </section>
 
+  <!-- risco em jogo -->
+  <section class="section problems" style="padding-top:0;">
+    <div class="container">
+      <div class="highlight-band">
+        <div>
+          <span class="tag-pill">Por que isso importa</span>
+          <h2>Um erro para menos vira prejuízo na obra. Um erro para mais vira proposta perdida.</h2>
+          <p>É por isso que esse cálculo não podia depender de quem estava preenchendo a planilha naquele dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abordagem + o que decide por face -->
+  <section class="section">
+    <div class="container">
+      <div class="prose" style="max-width:820px;">
+        <h3>A abordagem</h3>
+        <p>Eu desenvolvi um sistema que roda dentro do Revit, via Dynamo em Python, e calcula a fôrma elemento a elemento, face a face, a partir da geometria do modelo. Não é estimativa por perímetro × pé-direito: é a área real de cada face.</p>
+      </div>
+      <h3 class="section-title" style="font-size:clamp(20px,2.4vw,26px); margin-top:36px;">O que o sistema decide sozinho, por face</h3>
+      <div class="grid grid-2" style="margin-top:24px;">
+        <div class="card"><h3>Nova, reaproveitada ou compensada</h3><p>Para cada face, se aquela fôrma é nova, reaproveitada, ou compensada (reaproveita parte e complementa o resto).</p></div>
+        <div class="card"><h3>De onde veio o reaproveitamento</h3><p>Registra o rastro do doador: de qual elemento do pavimento de baixo a fôrma veio. Doação única, porque uma peça física não pode estar em dois lugares.</p></div>
+        <div class="card"><h3>Quando o jogo de fôrma estoura</h3><p>Detecta quando o limite de usos é atingido e a torre inteira precisa de material novo.</p></div>
+        <div class="card"><h3>As exceções da obra real</h3><p>Trata pavimento atípico e tipo, ciclo de reescoramento, mudança de seção e de pé-direito, laje que divide a face da viga, viga que atravessa o pilar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- o que o cliente recebe -->
+  <section class="section problems">
+    <div class="container">
+      <p class="eyebrow">O que o cliente recebe</p>
+      <h2 class="section-title">Entregáveis que dá para conferir e defender</h2>
+      <div class="grid grid-2" style="margin-top:40px; gap:44px; align-items:start;">
+        <div class="service-list">
+          <div class="service-item"><span class="n">01</span><div><h3>Modelo BIM com a fôrma colorida por status</h3><p>Novo, reaproveitado ou compensado. Dá para conferir visualmente, elemento por elemento, se o número faz sentido.</p></div></div>
+          <div class="service-item"><span class="n">02</span><div><h3>Quadro de proposta em Excel</h3><p>Gerado direto do modelo, pavimento por pavimento, já com majoração, arredondamento e a nomenclatura comercial da empresa.</p></div></div>
+          <div class="service-item"><span class="n">03</span><div><h3>Visualizador IFC na web</h3><p>Para navegar o modelo sem precisar de Revit instalado.</p></div></div>
+          <div class="service-item"><span class="n">04</span><div><h3>Dashboard em Power BI</h3><p>Para ler a obra inteira por indicador.</p></div></div>
+          <div class="service-item"><span class="n">05</span><div><h3>Parâmetros de auditoria em cada elemento</h3><p>Abra qualquer peça e veja por que o sistema decidiu aquilo.</p></div></div>
+        </div>
+        <!-- IMAGEM Uchoa (SAÍDA DO SISTEMA): captura do modelo no Revit com a fôrma COLORIDA POR STATUS
+             (novo / reaproveitado / compensado), com a legenda de cores visível. É a saída do sistema,
+             não um modelo de arquitetura — deixe claro o mapa de cores.
+             Recorte vertical 3:4 (para acompanhar a lista ao lado), mínimo 1200px de largura.
+             SANITIZAR COM ATENÇÃO REDOBRADA (view do Revit vaza muito nome):
+               - título/nome da VIEW (canto ou carimbo) — renomear para algo genérico antes do print;
+               - ANOTAÇÕES na view: tags, textos, cotas e legendas que citem obra/pavimento/cliente;
+               - nome do NÍVEL/pavimento (ex.: "3º PAV - OBRA X") em marcações, grids e níveis visíveis;
+               - Project Browser, ViewCube com nome de vista nomeada, barra de título e caminho de arquivo;
+               - nome do arquivo da captura. Deixe só o modelo + a legenda de cores de status. -->
+        <figure class="figure-block" style="aspect-ratio:3/4; display:grid; place-items:center; background:var(--paper); border:2px dashed var(--line-cyan); color:var(--ink-soft); text-align:center; padding:24px; margin:0;">
+          <span><strong>[ Modelo colorido por status ]</strong><br>novo · reaproveitado · compensado<br><small>captura vertical 3:4 · a inserir (spec no HTML)</small></span>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- profundidade (prova de escala) -->
+  <section class="section stats">
+    <div class="container">
+      <div class="center">
+        <p class="eyebrow">A profundidade por trás</p>
+        <h2 class="section-title">Não é um script. É um sistema.</h2>
+        <p class="section-sub" style="margin:0 auto 44px;">O que está em produção hoje:</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="stat"><div class="big">20</div><div class="label">scripts em produção</div></div>
+        <div class="stat"><div class="big">22</div><div class="label">documentos de regra de negócio</div></div>
+        <div class="stat"><div class="big">16+</div><div class="label">tipos de elemento com regra própria</div></div>
+      </div>
+      <p class="section-sub center" style="margin:44px auto 16px; max-width:760px;">Cada tipo de elemento tem sua própria regra de fôrma:</p>
+      <div style="display:flex; flex-wrap:wrap; gap:9px; justify-content:center; max-width:940px; margin:0 auto;">
+        <!-- pílulas com os tipos de elemento (fato dado pelo cliente) -->
+        <span class="etype">pilar retangular</span><span class="etype">pilar circular</span><span class="etype">pilar em L</span><span class="etype">pilar em U</span><span class="etype">viga reta</span><span class="etype">viga variável</span><span class="etype">viga curva</span><span class="etype">viga de coroamento</span><span class="etype">fundo de viga</span><span class="etype">floreira</span><span class="etype">parede de reservatório</span><span class="etype">laje maciça</span><span class="etype">laje faixa</span><span class="etype">laje aba</span><span class="etype">laje presa</span><span class="etype">rampa</span><span class="etype">tira de reescoramento</span><span class="etype">fechamento de laje</span><span class="etype">bloco de transição</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ganhos -->
+  <section class="section">
+    <div class="container prose" style="max-width:840px;">
+      <p class="eyebrow">O que isso muda</p>
+      <h2 class="section-title">Por que vale a pena fazer sob medida</h2>
+      <ul class="check">
+        <li><strong>Cálculo da geometria real</strong>, não estimativa por perímetro × pé-direito.</li>
+        <li><strong>Rastreabilidade:</strong> cada m² tem origem registrada. Dá para defender o número numa reunião com o cliente.</li>
+        <li><strong>Reprodutibilidade:</strong> a regra vive no código, não na cabeça de uma pessoa. O mesmo projeto gera o mesmo número, com qualquer operador.</li>
+        <li><strong>Revisão barata:</strong> o projeto mudou, roda de novo. Não se refaz a planilha do zero.</li>
+        <li><strong>Separação nova × reaproveitada:</strong> mostra o que é custo de material novo. Dá para propor um preço mais afiado sem subdimensionar.</li>
+        <li><strong>Escalável:</strong> a mesma lógica atende qualquer torre, sem reescrever regra.</li>
+        <li><strong>Conhecimento documentado:</strong> a inteligência do processo fica na empresa, não se perde na troca de equipe.</li>
+      </ul>
+      <!-- TODO Uchoa: confirmar métrica real antes de publicar.
+           Ex.: "o orçamento que levava X dias na planilha passou a levar Y horas."
+           Sem número medido, não publicar percentual/prazo inventado. -->
+    </div>
+  </section>
+
+  <!-- como eu trabalho (responde "e se ele sumir?") -->
+  <section class="section problems">
+    <div class="container">
+      <p class="eyebrow">Como eu trabalho</p>
+      <h2 class="section-title">Do diagnóstico à transferência</h2>
+      <div class="service-list" style="margin-top:40px; max-width:880px;">
+        <div class="service-item"><span class="n">01</span><div><h3>Diagnóstico</h3><p>Entendo o processo como ele é hoje: onde dói, o que consome tempo, qual número precisa ser confiável.</p></div></div>
+        <div class="service-item"><span class="n">02</span><div><h3>Desenho da regra com quem entende de obra</h3><p>Escrevo a regra junto com quem executa. É aqui que o software deixa de ser genérico e passa a valer.</p></div></div>
+        <div class="service-item"><span class="n">03</span><div><h3>Desenvolvimento</h3><p>Construo a solução e testo contra os casos difíceis, não só o caso feliz.</p></div></div>
+        <div class="service-item"><span class="n">04</span><div><h3>Validação em projeto real</h3><p>Rodo em um projeto de verdade e comparo com o que a equipe já sabe, elemento por elemento.</p></div></div>
+        <div class="service-item"><span class="n">05</span><div><h3>Documentação e transferência</h3><p>Deixo a regra documentada e a operação nas mãos da sua equipe. A inteligência fica na empresa, não comigo.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- stack — discreto -->
+  <section class="section" style="padding-top:0;">
+    <div class="container center">
+      <p style="color:var(--ink-soft); font-size:14.5px; margin:0;">Stack: Revit · Dynamo · Python · IFC · Power BI · Excel.
+        <span style="color:var(--gray);">A tecnologia é meio. O que resolve é a regra de obra bem modelada.</span></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
   <section class="section problems">
     <div class="container">
       <div class="center">
         <p class="eyebrow">Perguntas frequentes</p>
-        <h2 class="section-title">Dúvidas sobre desenvolvimento de soluções</h2>
+        <h2 class="section-title">Automação e desenvolvimento sob medida</h2>
       </div>
       <div class="faq">
         <details>
-          <summary>O que é desenvolvimento de soluções tecnológicas para a construção? <span class="q-plus">+</span></summary>
-          <div class="faq-a">É a criação de ferramentas, automações e pequenos sistemas sob medida para resolver problemas específicos do dia a dia da engenharia — quando não existe no mercado uma ferramenta pronta para aquela necessidade.</div>
+          <summary>O que é automação sob medida em Revit e Dynamo? <span class="q-plus">+</span></summary>
+          <div class="faq-a">É construir a lógica do seu processo dentro do Revit, usando Dynamo e Python, para calcular e extrair dados direto da geometria do modelo. Em vez de um script genérico, a regra da sua obra vira software.</div>
         </details>
         <details>
-          <summary>A UCHOA cria ferramentas sob medida? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Sim. Desenvolvemos automações, planilhas inteligentes e pequenas aplicações que se encaixam no processo da sua equipe, usando programação, automação e, quando faz sentido, Inteligência Artificial.</div>
+          <summary>Dá para calcular quantitativo direto da geometria do modelo? <span class="q-plus">+</span></summary>
+          <div class="faq-a">Sim. É o que o sistema de fôrma faz: mede a área real de cada face de cada elemento, não uma estimativa por perímetro × pé-direito. O mesmo vale para outros quantitativos.</div>
         </details>
         <details>
-          <summary>Vocês usam Inteligência Artificial nas soluções? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Usamos IA como meio, quando ela acelera análises e automações. O foco é resolver a dor do cliente com a tecnologia mais adequada — não vender IA como produto.</div>
+          <summary>E se você sair depois? Fico dependente de você? <span class="q-plus">+</span></summary>
+          <div class="faq-a">Não. Eu documento a regra e transfiro a operação para a sua equipe. A inteligência do processo fica na empresa. No case de fôrma, são 22 documentos de especificação de regra de negócio.</div>
         </details>
         <details>
-          <summary>A UCHOA desenvolve soluções em Maringá? <span class="q-plus">+</span></summary>
-          <div class="faq-a">Sim. Desenvolvemos soluções tecnológicas sob medida em Maringá-PR e remotamente para empresas de todo o Brasil. <a href="contato.html">Conte sua dor</a>.</div>
+          <summary>Você desenvolve à distância? <span class="q-plus">+</span></summary>
+          <div class="faq-a">Sim. Atendo de Maringá-PR e remotamente para empresas de todo o Brasil. <a href="contato.html">Conte sua dor</a>.</div>
         </details>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="section cta">
     <div class="container">
-      <h2>Tem um processo que poderia ser automatizado?</h2>
-      <p>Conte sua dor para a UCHOA BIM & CUSTOS e veja como a tecnologia pode resolver.</p>
+      <h2>Tem um processo que roda na unha e você não confia no número?</h2>
+      <p>Me conta a dor. Se der para transformar em software que roda sozinho, eu te digo como.</p>
       <a href="contato.html" class="btn btn-primary">Falar com a UCHOA</a>
     </div>
   </section>
